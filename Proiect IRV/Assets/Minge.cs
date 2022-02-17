@@ -38,7 +38,7 @@ public class Minge : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         state = 0;
         direction.maxValue = 10;
-        height.maxValue = 10;
+        height.maxValue = 5;
         power.maxValue = 10;
     }
     void Start()
@@ -82,7 +82,7 @@ public class Minge : MonoBehaviour
             case 4:
                 if(timer > 3)
                 {
-                    Application.LoadLevel(0);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
                 timer += Time.deltaTime;
                 break;
@@ -111,8 +111,8 @@ public class Minge : MonoBehaviour
                 case 3:
                     break;
                 case 4:
-                    //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    Application.LoadLevel(0);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    //Application.LoadLevel(0);
                     break;
             }
         }
